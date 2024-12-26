@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 입출력 confirm()</title>
+</head>
+
+<body>
+    확인창 : 사용자가 [확인],[취소] 버튼 중에서 직접 클릭. confirm('메시지') 형식으로, 사용자가 어떤 버튼을 눌렀는지 결과를 변수에 저장한 후 그 값에 따라 프로그램에서 처리<br>
+    확인창 결과 : <span id="confirmAnswer"></span>
+
+    <script>
+        var answer = confirm("변경하시겠습니까?");
+        document.getElementById("confirmAnswer").textContent = answer ? "확인" : "취소";
+    </script>
+
+
+
+</body>
+
+</html>
