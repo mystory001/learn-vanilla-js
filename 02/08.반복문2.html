@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 중첩 for</title>
+</head>
+<body>
+    <!-- 
+    중첩된 for문
+    for문 안에 다른 for문을 넣어서 사용할 수 있는데 이를 중첩된 for문
+    -->
+
+    <script>
+        var i;
+        var j;
+        for(i = 2; i < 10; i++){
+            document.write("<h1>"+i+"단</h1>");
+            for(j = 1; j < 10; j ++){
+                document.write(i+" * "+j+" = " + (i*j)+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

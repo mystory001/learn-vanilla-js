@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치도 만들기1</title>
+</head>
+<body>
+    <script>
+        var memNum = prompt("입장할 관객 수는?");
+        var colNum = prompt("한 줄에 몇 명씩 앉을 것인지?");
+
+        if(memNum%colNum==0){
+            rowNum = memNum/colNum;
+        } else {
+            rowNum = Math.round((memNum/colNum),0)  + 1;
+        }
+
+        document.write(colNum +"씩 한 줄 앉을 경우 " + rowNum + "개의 줄이 필요합니다."); // 42, 5 입력 시 9.4
+
+        // parseInt()  
+        // prompt()에서 입력받은 값은 기본적으로 문자열로 저장됨. 문자열값이라도 산술 연산에 사용 될 경우 자동으로 숫자형으로 변환되지만 예상치 못한 곳에서 다르게 변환될 수도 있음음
+        // 따라서 prompt()로 입력받은 값을 처음부터 숫자로 바꿔주는 것이 안전함 이때 parseInt() 함수를 사용
+    </script>
+</body>
+</html>

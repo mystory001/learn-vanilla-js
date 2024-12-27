@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <!-- 
+    if문
+    if(조건){
+	조건 결과가 true일 때 실행
+    }
+
+    if-else문
+    if(조건){
+	조건 결과가 true일 때 실행
+    } else {
+        조건 결과가 false일 때 실행
+    }
+    -->
+
+    <!-- <script>
+        var num = prompt("숫자를 입력하세요.");
+
+        if(num%3==0) {
+            document.write("3의 배수");
+        } else {
+            document.write("3의 배수가 아닙니다.");
+        }
+    </script> -->
+
+    <script>
+        var num = prompt("숫자를 입력하세요.");
+
+        if(num!=null){
+            if(num%3==0) {
+            document.write("3의 배수");
+            } else {
+                document.write("3의 배수가 아닙니다.");
+            }
+        } else {
+            document.write("입력이 취소되었습니다.")
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <!-- 
+    switch
+    처리할 명령이 많은 경우 if-else문을 여러 개 사용해서 조건을 확인하는 것보다 switch문이 더 보기 편함
+    -->
+
+    <script>
+        var switchTest = prompt("관심 언어를 입력해주세요. 1 : html/css, 2 : javascript, 3. python");
+
+        switch(switchTest){
+            case "1" : document.write("관심있어하는 언어는 <b>html/css</b> 입니다.");
+            //break;
+            case "2" : document.write("관심있어하는 언어는 <b>javascript</b> 입니다.");
+            //break;
+            case "3" : document.write("관심있어하는 언어는 <b>python</b> 입니다.");
+            //break;
+            default : document.write("잘 못 입력하셨습니다.");
+        }
+    </script>
+</body>
+</html>

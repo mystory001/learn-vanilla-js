@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+
+<body>
+    <!-- 
+    변수(variable) : 프로그램을 실행하는 동안 값이 여러 번 달라질 수 있는 데이터
+    ↔ 상수(constant) : 값을 한 번 지정하면 바뀌지 않는 데이터
+    
+    변수 선언 규칙
+    변수를 사용하려면 변수를 구별할 수 있도록 이름을 붙여 주어야 하는데, 이것을 변수 선언
+
+    변수선언
+    var || let || const 변수명
+    -->
+
+
+    <script>
+        // 변수 선언하기
+        var currentYear = 2024;
+        var birthYear;
+        var age;
+
+        // 변수 한꺼번에 선언
+        // var currentYear, birthYear, age;
+
+        birthYear = prompt("태어난 연도를 입력해주세요.(형식 : YYYY)", "");
+        age = currentYear - birthYear;
+        document.write(currentYear + "년 현재, " + age + "입니다.");
+
+    </script>
+
+</body>
+
+</html>
