@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅</title>
+</head>
+<body>
+    <!--
+    호이스팅
+    상황에 따라 변수의 선언과 할당을 분리해서 선언 부분을 스코프의 가장 위쪽으로 끌어올리는 것
+    -->
+    <script>
+        var x = 10;
+
+        function hoistingEx(){
+            console.log("x = "+x);
+            console.log("y = "+y);
+            var y = 20;
+        }
+        hoistingEx();
+    </script>
+
+    <!-- 
+    위의 코드를 자바스크립트 해석기는
+    <script>
+        var x = 10;
+
+        function hoistingEx(){
+            var y;
+            console.log("x = "+x);
+            console.log("y = "+y);
+            y = 20;
+        }
+        hoistingEx();
+    </script>
+    으로 인식함
+    -->
+
+</body>
+</html>

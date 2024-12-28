@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var</title>
+</head>
+<body>
+    <!-- 
+    스코프 : 변수가 적용되는 범위. 변수가 어디까지 유효한지 범위를 가리키는 영역
+    지역 변수, 로컬 변수(local variable) : 한 함수 안에서만 사용할 수 있는 변수
+    전역 변수, 글로벌 변수(global variable) : 스크립트 소스 전체에서 사용할 수 있는 변수
+    지역 변수를 선언할 때 사용하는 예약어 var
+    전역 변수를 선언할 때는 var 예약어를 붙이지 않음. 함수 안에 선언한 변수라도 var 예약어를 사용하지 않으면 됨
+    -->
+
+    <script>
+        // var 예약어로 지역 변수 선언하기
+        function addNumber(){
+            var sum = 10 + 20; // 지역 변수 선언
+        }
+        addNumber(); // 함수 호출
+        // console.log(sum);
+    </script>
+
+    <script>
+        // var 예약어를 사용한 지역 변수와 전역 변수
+        function addNumber2(){
+            var sum = 10 + 20;
+            multi = 10 * 20;
+        }
+        addNumber2();
+        console.log(multi);
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <!-- 
+    let과 const의 등장
+    var 예약어를 사용하는 변수는 함수 영역의 스코프를 가지고, 재할당과 재선언이 가능함. 이는 프로그램 오류를 발생시킬 수 있음.
+    var 예약어를 빠뜨리면 의도하지 않게 전역 변수가 되기도 하고, 변수를 재선언하거나 값을 재할당해 버리는 경우가 생김.
+    이러한 문제를 해결하기 위해 let, const가 추가되었고, var 예약어는 사용하지 않을 것이 권장됨
+    var, let, const의 가장 큰 차이는 스코프의 범위인데 var는 함수 영역의 스코프를 가지며, let과 const는 블록 영역의 스코프를 가짐
+    -->
+
+    <!-- 
+    let 예약어
+    let으로 선언한 변수는 변수를 선언한 블록에서만 유효
+    -->
+    <script>
+        // 블록 변수 선언
+        function calcSum(n){
+            let sum = 0;
+            for(let i = 1; i < n + 1; i++){
+                sum += i;
+            }
+            console.log(sum);
+        }
+        calcSum(10);
+    </script>
+
+    <!-- 
+    전역 변수를 선언하고 싶다면 let 예약어를 쓰지 않고 변수 이름과 초깃값만 할당하면 됨
+    -->
+    <script>
+        // 전역 변수 선언하기
+        function caclSum1(n){
+            sum = 0;
+            for(let i = 0; i <= n; i++){
+                sum += i;
+            }
+        }
+        caclSum1(10);
+        console.log(sum);
+    </script>
+
+    <!-- 
+    let예약어를 사용하여 선언한 변수는 값을 재할당할 수 있지만 변수를 재선언할 수 없음
+    -->
+    <script>
+        // 블록 변수의 재할당
+        function calcSum2(n){
+            let sum = 0;
+            for(let i = 0; i <= n; i++){
+                sum += i;
+            }
+            sum = 10; // sum 변수 재할당
+            console.log(sum);
+        }
+        calcSum2(10);
+    </script>
+
+    <script>
+        // 재선언할 수 없는 let 변수
+        function caclSum3(n){
+            let sum = 0;
+            for(let i = 0; i <= n; i++){
+                    sum += i;
+                }
+            // let sum;
+            console.log(sum);
+
+        }
+        calcSum3(10);
+    </script>
+
+    <!-- 
+    호이스팅이 없는 변수
+    let 예약어를 사용한 변수는 선언하기 전에 사용할 경우 오류메시지를 나타냄
+    -->
+    <script>
+        var x = 10;
+        function dispalyNum(){
+            console.log("x = " + x);
+            console.log("y = " + y); // 선언되지 않은 y를 사용
+            let y = 20; // y 변수 선언
+        }
+    </script>
+</body>
+</html>
