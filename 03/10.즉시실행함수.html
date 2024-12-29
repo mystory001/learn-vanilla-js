@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시실행함수</title>
+</head>
+<body>
+    <!-- 
+    즉시실행함수
+    한 번만 실행하는 함수, 함수를 정의하면서 동시에 실행하는 함수를 즉시 실행함수
+    함수를 실행하는 순간에 자바스크립트 해석기에서 함수를 해석
+    즉시 실행 함수의 기본형식은 함수를 식 형태로 선언하므로 마지막에 세미콜론(;)을 붙임
+    (function(){
+        명령;
+    }());
+    또는
+    (function(매개변수){
+        명령;
+    }(인수));
+    -->
+    <!-- <script>
+        // 즉시 실행 함수
+        (function(){
+            var name = prompt("이름을 입력해주세요.");
+            document.write("안녕하세요. <b>" + name + "</b> 님");
+        }());
+    </script> -->
+
+    <!-- 
+    매개변수를 사용하는 함수라면 선언 부분 끝에 함수 실행을 위한 인수를 넣어줌 
+    -->
+    <script>
+        // 매개변수가 있는 즉시 실행 함수
+        (function(a,b){
+            sum = a + b;
+        }(100,200));
+        document.write("함수 실행 결과 " + sum);
+    </script>
+</body>
+</html>

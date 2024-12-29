@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 처리기</title>
+</head>
+<style>
+    a:link, a:visited {
+	color:black;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	width:500px;
+	margin:10px auto;
+	padding:0;
+}
+li {
+	display:inline-block;
+	width:120px;
+	border:1px solid #ccc;
+	padding:10px 15px;	
+	font-size:16px;
+	text-align:center;
+}
+#result {
+	width:500px;
+	height:300px;
+	margin:30px auto;
+	border:2px solid #ccc;
+	border-radius:15px;
+}
+p {
+	width:80%;
+	padding:10px;
+	line-height: 2em;
+}
+</style>
+<body>
+    <!-- 
+    이벤트 처리기(이벤트 핸들러)
+    이벤트가 발생하면 처리하는 함수
+    이벤트 처리하는 기본적인 방법
+    이벤트가 발생한 HTML 태그에 이벤트처리기를 직접 연결
+    이벤트 처리기의 기본 형식
+    HTML 태그 안에서 'on' 다음 '이벤트명'을 붙여 속성 이름 만들기
+    → 실행할 이벤트 처리기의 함수명을 작성
+    <\태그 on이벤트명 = "함수명">
+    이벤트가 발생한 후 여러 가지 명령을 실행해야 한다면, 그 명령을 묶어 하나의 자바스크립트 함수로 만드는 것이 좋음. 이벤트가 발생할 때 함수 이름과 인수를 지정하여 실행
+    -->
+    <ul>
+        <li><a href="#" onclick="changeBg('yellow')">Yellow</a></li>
+        <li><a href="#" onclick="changeBg('green')">Green</a></li>
+        <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+    </ul>
+    <div id="result"></div>
+
+    <script>
+        function changeBg(color){
+            // var result = document.querySelector("#result");
+            var result = document.getElementById("result");
+            result.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

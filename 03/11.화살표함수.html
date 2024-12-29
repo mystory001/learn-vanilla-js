@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수</title>
+</head>
+<body>
+    <!-- 
+    화살표 함수
+    => 표기법을 사용해 함수 선언을 좀 더 간단하게 작성할 수 있음
+    (매개변수) => {함수내용}
+    -->
+    
+    <!-- 
+    매개변수가 없을 경우
+    매개변수를 넣는 괄호 안을 비워둠
+    중괄호 안에 함수 내용이 한 줄이라면 중괄호를 생략. 이때 return문은 생략된 것으로 간주
+    -->
+    <script>
+        // 매개변수가 없는 함수
+        var hi = function(){
+            return "Hello World";
+        }
+    </script>
+    
+    <script>
+        // 매개변수가 없는 화살표 함수
+        var hi = () => {return "Hello World"};
+    </script>
+    
+    <script>
+        // 매개변수가 없는 화살표 함수(중괄호 생략)
+        var hi = () => "Hello World";
+    </script>
+
+    <!-- 
+    매개변수가 1개인 경우
+    매개변수의 괄호 생략 가능
+    -->
+    <script>
+        // 매개변수가 1개인 함수
+        var hi = function(user){
+            document.write(user + "님 안녕하세요?");
+        }
+    </script>
+
+    <script>
+        // 매개변수가 1개인 화살표 함수
+        var hi = user => {document.write(user + "님 안녕하세요?")};
+    </script>
+
+    <!-- 
+    매개변수가 2개 이상인 경우
+    (매개변수) => {...} 처럼 사용
+    -->
+    <script>
+        // 매개변수가 2개인 함수
+        var sum = function(a, b){
+            return a + b;
+        }
+    </script>
+
+    <script>
+        // 매개변수가 2개인 화살표 함수
+        var sum = (a,b) => a + b;
+    </script>
+
+</body>
+</html>

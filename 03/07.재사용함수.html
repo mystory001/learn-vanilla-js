@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재사용함수</title>
+</head>
+<body>
+    <!-- 
+    재사용성 : 입력을 바꿔 여러 번 사용할 수 있는 성질 
+    -->
+
+    <!-- 
+    매개변수 : 함수를 실행하는 데 필요한 값을 함수 밖에서 제공하는 것. 함수 안에서만 사용 
+    -->
+
+    <!-- 
+    return
+    결괏값을 함수 밖에서 사용하려면 함수를 실행한 위치로 돌려줘야함. 이러한 동작을 값을 반환한다(return)고 함
+    함수의 결괏값을 반환할 때 return을 사용해서 넘겨줄 값을 지정해주면 됨 
+    -->
+    <script>
+        // 매개 변수를 사용한 함수 선언하기
+        function addNum(num1, num2){
+            var sum = num1 + num2;
+            return sum;
+        }        
+    </script>
+
+    <!-- 
+    인수(argument)
+    함수 선언이 끝났다면 실행할 함수를 호출해야함. 매개변수가 있는 함수를 호출할 때 실제 값 부분을 인수라고함
+    -->
+    <script>
+        // 매개변수를 사용한 함수 선언하고 호출하기
+        function addNum1(num1, num2){
+            var sum = num1 + num2;
+            return sum;
+        }
+        var result = addNum1(10, 3);
+        document.write("두 수를 더한 값은 " + result);
+    </script>
+
+    <script>
+        // 위의 코드를 더 간단하게 작성
+        function addNum2(num1, num2){
+            return num1 + num2;
+        }
+        document.write("두 수를 더한 값은 " + addNum2(10,20));
+    </script>
+
+    <!-- 
+    매개변수 기본값 지정
+    ES6부터 함수에서 매개변수를 선언할 때 기본값을 지정하는 기능도 생김
+    -->
+    <script>
+        // 매개변수의 기본값 지정
+        function multiple(a, b=5, c=10){
+            return a * b * c;
+        }
+        console.log(multiple(5,10,20)); // a = 5, b = 10, c = 20
+        console.log(multiple(10,20)); // a = 10, b = 20, c = 10(기본값)
+        console.log(multiple(50)); // a = 50, b = 5(기본값), c = 10(기본값)
+    </script>
+</body>
+</html>

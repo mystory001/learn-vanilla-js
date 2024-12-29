@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수</title>
+</head>
+<body>
+    <!-- 
+    익명함수 : 이름이 없는 함수를 익명 함수라고하며, 익명 함수를 선언할 때는 이름을 붙이지 않음
+    익명 함수 실행은 익명 함수는 함수 자체가 식이므로 함수를 변수에 할당할 수 있으며, 또한 다른 함수의 매개변수로 사용할 수 있음
+    -->
+    <script>
+        // 익명 함수 선언하기
+        function(a, b){
+            return a + b;
+        }
+    </script>
+
+    <script>
+        // 익명함수 실행
+        var sum = function(a, b){
+            return a + b;
+        }
+        document.write("익명 함수 실행 결과 : " + sum(10,20));
+    </script>
+</body>
+</html>
