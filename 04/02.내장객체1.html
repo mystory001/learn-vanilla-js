@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트의 내장 객체 Array</title>
+</head>
+<body>
+    <!-- 
+    자바스크립트의 내장 객체
+    웹 문서의 계층 구조와 상관없이 나타낼 수 있는 객체
+    -->
+    <script>
+        // Array 객체 인스턴스 만들기 초기값이 없는 경우
+        var numbers = new Array(); // 배열의 크기를 지정하지 않음
+        var numbers = new Array(4); // 배열의 크기를 지정
+
+        var numbers = ["1","2","3","4"] // 배열 선언
+        var numbers = Array("1","2","3","4"); // Array 객체를 사용한 배열 선언언
+    </script>
+
+    <!-- Array 객체의 메서드 -->
+    <script>
+        // 배열끼리 합치는 concat()
+        var nums = [1,2,3];
+        var chars = ["a","b","c"];
+
+        var numsChars = nums.concat(chars);
+        var charsNums = chars.concat(nums);
+        document.write(numsChars + "<br>");
+        document.write(charsNums);
+    </script>
+<br><br>
+    <script>
+        // 배열 안의 요소 합치기 join()
+        var nums = [1,2,3];
+        var chars = ["a","b","c"];
+
+        var string1 = nums.join();
+        document.write(string1);
+        document.write("<br>구분<br>")
+        var string2 = chars.join('/');
+        document.write(string2);
+    </script>
+<br><br>
+    <script>
+        // 새로운 요소를 추가하는 push(), unshift()
+        var nums = [1,2,3];
+        var ret1 = nums.push(4,5); // 배열 맨 끝에 새로운 요소를 추가
+        document.write("배열의 길이 : " + ret1 + ", 배열의 요소 " + nums);
+        document.write("<br>구분<br>")
+        var ret2 = nums.unshift(0); // 배열 맨 앞에 새로운 요소 추가
+        document.write("배열의 길이 : " + ret2 + ", 배열의 요소 " + nums);
+    </script>
+<br><br>
+    <script>
+        // 배열에서 요소 꺼내기 pop(), shift()
+        var nums = [1,2,3];
+        var rem1 = nums.pop(); // 마지막 요소를 꺼냄
+        document.write("꺼낸 요소 " + rem1 + ", nums의 요소 : " + nums);
+        document.write("<br>구분<br>")
+        var rem2 = nums.shift(); // 1번째 요소를 꺼냄
+        document.write("꺼낸 요소 " + rem2 + ", nums의 요소 : " +nums);
+    </script>
+<br><br>
+    <script>
+        // 원하는 위치에 요소를 추가, 삭제하는 splice()
+        // splice() 메서드의 인수가 1개인 경우 요소 삭제
+        var nums = [1,2,3,4,5];
+        var newNums = nums.splice(2);
+        document.write("반환된 배열 : " + newNums + " 변경된 배열 : " + nums);
+    </script>
+<br><br>
+    <script>
+        // splice() 메서드의 인수가 2개인 경우. 첫 번째 인수는 인덱스값, 두 번째 인수는 삭제할 요소의 개수
+        var lang = ["html", "css", "js", "java"];
+        var newLang = lang.splice(2,1);
+        document.write("반환된 배열 : " + newLang + "변경된 배열 : " + lang);
+    </script>
+<br><br>
+    <script>
+        // splice() 메서드의 인수가 3개인 경우. 첫 번째 인수는 배열에서 삭제할 시작 위치, 두 번째 인수는 삭제할 개수, 세번째 인수는 삭제한 위치에 새로 추가할 요소 지정
+        var lang = ["html", "css", "js", "java"];
+        var newLang = lang.splice(1,1,"python");
+        document.write("반환된 배열 : " + newLang + "변경된 배열 : " + lang);
+    </script>
+<br><br>
+     <script>
+        //기존 배열을 바꾸지 않으면서 요소를 꺼내는 slice()
+        // slice() 메서드의 인수가 1개인 경우 요소 꺼내기
+        var color = ["black", "green", "yellow", "blue"];
+        var color2 = color.slice(2) // 인덱스 값이 2인 요소부터 마지막 요소까지 꺼내기
+        document.write(color2);
+    </script>
+<br><br>
+    <script>
+        // slice() 메서드의 인수가 2개인 경우 요소 꺼내기
+        var color = ["black", "green", "yellow", "blue"];
+        var color2 = color.slice(2,4); // 인덱스값이 2부터 3인 요소까지 꺼내기(두번째 요소의 인덱스)
+        document.write(color2);
+    </script>
+</body>
+</html>

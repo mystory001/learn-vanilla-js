@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <!-- 
+    객체(Object) 프로그램에서 인식할 수 있는 모든 대상
+    자바스크립트에서는 웹 과 관련된 대상을 모두 객체로 인식
+    자바스크립트의 객체 : DOM, BOM, 내장 객체
+    문서 객체 모델(DOM) : 웹 문서 자체도 객체이고 그 안에 삽입되어 있는 이미지와 링크, 텍스트 필드 등도 모두 객체. 일반적으로 웹 문서에 삽입하는 document, image, link 객체 등
+
+    브라우저 관련 객체(BOM) :  웹 브라우저에서 사용하는 정보를 객체로 나타냄. 사용하는 브라우저 정보를 담고 있는 navigator 객체를 비롯해 history, location, screen 객체 등
+
+    내장 객체 : 웹 프로그래밍을 할 때 자주 사용하는 요소는 자바스크립트 안에 미리 객체로 정의되어 있는데, 이를 내장 객체라고 함
+    
+    객체의 인스턴스 만들기
+    객체를 참조 형태로 사용해야 함. 객체가 아니라 인스턴스 형태로 만들어서 사용해야 함
+    객체의 인스턴스를 만들 때는 new 예약어를 사용하고 new 뒤에 만들려고 하는 객체 이름
+    new 객체명
+    -->
+    <script>
+        // Date 객체의 인스턴스 만들기
+        var date = new Date();
+        document.write("현재 시각은 : " + date+"<br>");
+    </script>
+
+    <!-- 
+    프로퍼티와 메서드
+    프로퍼티는 객체의 특징이나 속성
+    메서드는 객체에서 할 수 있는 동작을 표현
+    -->
+
+    <!-- 
+    마침표 표기법으로 프로퍼티와 메서드 작성
+    인스턴스는 객체의 프로퍼티와 메서드를 그대로 물려받아 똑같이 사용
+    프로퍼티와 메서드를 표시하려면 인스턴스명 뒤에 마침표를 붙이고 객체의 프로퍼티나 메서드 이름을 작성
+    -->
+    <script>
+        // 로컬 형식으로 현재 시각 표시
+        var now = new Date();
+        document.write("현재 시각 toLocaleString() : " + now.toLocaleString());
+    </script>
+</body>
+</html>

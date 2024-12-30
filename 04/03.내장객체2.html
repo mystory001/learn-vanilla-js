@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트의 내장 객체 Date</title>
+</head>
+<body>
+    <!-- 
+    Date 객체
+    날짜와 시간 정보를 나타낼 수 있음
+    현재 날짜와 시간을 출력하거나 달력을 표시할 수도 있고, 특정일까지 얼마나 남았는지 알려주는 등 사이트에서 여러가지로 응용할 수 있음
+    -->
+    <script>
+        // Date 객체 인스턴스 만들기
+        var date = new Date();
+        document.write(date);
+    </script>
+<br><br>
+    <script>
+        // Date 객체로 특정 날짜 나타내기
+        var date = new Date("2025-01-01"); // 월, 일이 한 자리일 때는 앞에 0을 붙이지 않고 2025-1-1로 작성해도 됨
+        document.write("Date 객체로 특정 날짜 나타내기 " + date);
+        document.write("<br>")
+        // Date 객체로 특정 날짜와 시간 나타내기
+        var date1 = new Date("2024-12-30T17:00:00");
+        document.write("Date 객체로 특정 날짜와 시간 나타내기 " + date1);
+    </script>
+<br><br>
+    <script>
+        // 자바스크립트의 날짜, 시간 입력 방식 알아보기
+        // YYYY 연도, MM 월, DD 일, HH 시간, MM 분, SS 초를 의미
+        // 1. YYYY-MM-DD 형식
+        new Date("2024");
+        new Date("2024-12");
+        new Date("2024-12-30");
+
+        // 2. YYYY-MM-DDTHH 형식
+        new Date("2024-12-30T17:00:00"); // 시간을 나타낼 때는 날짜뒤에 T를 붙이고 HH:MM:SS의 형태로 사용
+        new Date("2024-12-30T17:00:00Z"); // 맨 끝에 Z를 붙이면 UTC(국제 표준시)로 표시
+
+        // 3. MM/DD/YYYY 형식
+        new Date("12/30/2024");
+
+        // 4. 이름 형식
+        new Date("TUE Dec 30 2024 17:00:00 GMT+0900 (대한민국 표준시)");
+    </script>
+<br><br>
+    <script>
+        
+    </script>
+<br><br>
+        <script>
+            
+        </script>
+<br><br>
+    <script>
+        
+    </script>
+</body>
+</html>
