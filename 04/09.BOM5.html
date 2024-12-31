@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저와 관련된 객체 screen객체</title>
+</head>
+<body>
+    <!-- 
+    브라우저와 관련된 객체 screen객체
+    사용자의 화면 크기나 정보를 알아 낼 때 사용
+    프로퍼티
+    availHegiht
+    availWidth
+    colorDepth : 화면에서 픽셀을 렌더링 할 때 사용하는 색상 수
+    height
+    orientation : 화면의 현재 방향
+    pixelDepth : 화면에서 픽셀을 렌더링할 때 사용하는 비트 수
+    width
+    메서드
+    lockOrientation() : 화면 방향을 잠금
+    unlockOrientation() : 화면 방향 잠금을 해제
+    -->
+    <script>
+        // screen 객체로 화면의 너비와 높이 알아내기
+        document.write("<b>screen.availHeight</b>"+screen.availHeight+"<br>");
+        document.write("<b>screen.availWidth</b>"+screen.availWidth+"<br>");
+        document.write("<b>screen.height</b>"+screen.height+"<br>");
+        document.write("<b>screen.width</b>"+screen.width+"<br>");
+    </script>
+</body>
+</html>

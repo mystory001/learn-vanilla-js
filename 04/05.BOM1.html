@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저와 관련된 객체 window객체</title>
+</head>
+<body>
+    <!-- 
+    브라우저와 관련된 객체 window객체
+    자바스크립트 내에 웹 브라우저와 관련된 여러 객체가 미리 정의되어 있기 때문에 특정한 사이트로 이동, 새 탭 열기 등 브라우저와 관련된 여러 가지 효과를 만들 수 있음
+    웹 브라우저 창에 문서가 표시되는 순간 브라우저는 HTML 소스를 한 줄씩 읽으면서 화면에 내용을 표시하고 관련된 객체를 만들어냄
+    웹 브라우저가 열리면 window 객체가 만들어지고 밑으로 하위 요소에 해당하는 객체들이 나타남
+    window 하위에는 document, navigator, history, location, screen 객체가 존재
+        window : 브라우저 창이 열릴 때마다 하나씩 만들어짐. 브라우저 창 안의 요소 중에서 최상위에 존재
+        document : 웹 문서마다 하나씩 있으며 body 태그를 만나면 만들어짐. HTML 문서의 정보가 담겨 있음
+        navigator : 현재 사용하는 브라우저의 정보가 들어있음
+        history : 현재 창에서 사용자의 방문 기록을 저장
+        location : 현재 페이지의 URL 정보가 담여있음
+        screen : 현재 사용하는 화면 정보를 다룸
+    -->
+
+    <!-- 
+    window 객체의 프로퍼티
+    window 객체는 웹 브라우저의 상태를 제어하며 자바스크립트의 최상위에 존재, 자바스크립트의 모든 객체는 window 객체 안에 포함
+    window 객체의 프로퍼티는 주로 웹 브라우저 창의 정보를 가져오거나 값을 바꿀 때 사용
+    프러퍼티를 사용하려면 프로퍼티 이름 앞에 'window.'를 붙임
+    document : 브라우저 창에 표시된 웹 문서에 접근
+    frameElement : 현재 창이 다른 요소 안에 포함되어 있을 경우 그 요소를 반환하고, 그렇지 않다면 null을 반환
+    innerHeight : 내용 영역의 높이
+    innerWidth : 내부 영역의 너비
+    localStorage : 웹 브라우저에서 데이터를 저장하는 로컬 스토리지를 반환
+    location : window 객체의 위치 또는 현재 URL을 나타냄
+    name : 브라우저 창의 이름을 가져오거나 수정
+    ,...
+    -->
+
+    <!-- 
+    window 객체의 메서드
+    웹 브라우저 창 자체와 관련
+    alert()나 prompt()는 windwo 객체의 메서드임. 원래는 window.alert()나 window.prompt()라고 해야하지만 window 객체는 기본 객체이므로 'window.'을 생략해도 사용할 수 있음
+    window 객체 메서드
+    alert() : 알림창
+    blur() 현재 창에서 포커스를 제거
+    close() : 현재 창 닫기
+    confirm() : 확인, 취소 버튼이 있는 확인 창을 표시
+    focus() : 현재 창에 포커스를 부여
+    open() : 새로운 창
+    ,....
+    -->
+
+    <script>
+        // 새 브라우저 창을 여는 open()
+        // window.open(경로, 창이름, 창옵션)
+        // 경로 : 팝업 창에 표시할 문서나 사이트의 경로(주소)를 나타냄
+        // 창 이름 : 창 이름을 지정하지 않으면 팝업 창이 계속 새로 나타남
+        // 창 옵션 : left, top 속성을 사용해 위치를 정하거나 너비, 높이 속성을 사용해 크기를 지정할 수 있음. 지정하지 않으면 맨 왼쪽 위에 나타남
+        window.open("popup.html", "", "width=500, height=400");
+    </script>
+
+    <script>
+        // 팝업이 차단된 브라우저의 알림 창 표시
+        function openPopup(){
+            var win = window.open("popup.html", "", "width=500, height=400");
+            if(win == null){
+                alert("팝업이 차단되어 있습니다. 팝업을 허용해주세요.");
+            } else {
+                document.write("팝업이 열렸습니다.");
+            }
+            popup.moveBy(100,100);
+        }
+    </script>
+
+    <!-- 
+    브라우저 창을 닫는 close()
+    일반적으로 팝업 창 내용을 모두 살펴본 후 창을 닫을 수 있도록 화면 아래 [닫기] 버튼이나 링크를 포함
+    window.close()
+    -->
+</body>
+</html>
