@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소에 접근하고 속성 가져오기</title>
+</head>
+<body>
+    <!-- 
+    웹 문서에서 원하는 요소를 찾아가는 것을 '접근한다.'라고 함
+    -->
+
+    <!--
+    DOM에 접근
+    CSS에서 class, id, 태그(선택자) 등의 스타일을 각각 구별해서 정의해야 함
+    
+    id 선택자로 접근하는 getElementById()
+    요소명.getElementById("id명")
+
+    class 값으로 접근하는 getElementsByClassName()
+    요소명.getElementsByClassName("클래스명")
+    ※ class 선택자는 중복되어 사용할 수 있으므로 Element가 아닌 Elements
+    
+    태그 이름으로 접근하는 getElementsByTagName()
+    요소명.getElementsByTagName("태그명")
+    
+    다양한 방법으로 접근 querySelector(), querySelectorAll()
+    DOM 트리의 텍스트, 속성 노드까지 자유롭게 제어하려면 querySelector(), querySelectorAll()
+    노드.querySelector(선택자)
+    노드.querySelectorAll(선택자 또는 태그)
+    id 선택자처럼 반환값이 하나라면 querySelector()를 사용
+    class 선택자나 태그 이름을 사용하여 여러 값이 한꺼번에 반환될 경우 querySelectorAll()
+    선택자를 표시할 때 id 이름 앞에는 # class 이름 앞에는 . 태그는 기호 없이 태그명만 작성
+    querySelector()에서 class 이름으로 접근할 때 class 이름을 사용한 여러 요소 중에서 첫 번째 요소만 반환
+    -->
+
+    <!-- 
+    웹 요소의 내용을 수정하는 innerText, innerHTML 프로퍼티
+    웹 요소의 내용을 수정할 때 사용
+    innerText 프로퍼티는 텍스트 내용을 표시
+    요소명.innerText = 내용
+    innerHTML 프로퍼티는 HTML 태그까지 반영하여 표시
+    요소명.innerHTML = 내용
+    -->
+    <button onclick="intext()">innerText로 표시</button>
+    <button onclick="inHTML()">innerHTML 표시</button>
+    <h1>현재 시각 : </h1>
+    <div id="current"></div>
+
+    <script>
+        // innerText, innerHTML 프로퍼티 사용
+        var now = new Date();
+
+        function intext(){
+            document.getElementById("current").innerText = now;
+        }
+
+        function inHTML(){
+            document.getElementById("current").innerHTML = "<b>"+ now+"</b>";
+        }
+    </script>
+
+</body>
+</html>

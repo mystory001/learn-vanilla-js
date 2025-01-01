@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성값이 있는 새로운 요소 추가하기</title>
+</head>
+<body>
+    <!-- 
+    속성값이 있는 새로운 요소 추가하기
+    요소 노드 만들기 createElement() 메서드
+    속성 노드 만들기 createAttribute() 메서드
+    속성 노드 연결 setAttributeNode() 메서드
+    자식 노드 연결 appendChild() 메서드
+    전체 소스 코드 완성
+    -->
+
+    <div id="container">
+        <h1>DOM</h1>
+        <a href="#" onclick="addContents(); this.onclick=''">더보기</a>
+        <div id="info"></div>
+    </div>
+
+    <script>
+        function addContents(){
+            var newP = document.createElement("p");
+            var textNode = document.createTextNode("DOM은 Document Object Model의 줄임말");
+            newP.appendChild(textNode);
+
+            var newImg = document.createElement("img")
+            var srcNode = document.createAttribute("src");
+            var altNode = document.createAttribute("alt");
+            srcNode.value = "img/dom.jpg";
+            altNode.value = "DOM 트리 예제";
+            newImg.setAttributeNode(srcNode);
+            newImg.setAttributeNode(altNode);
+
+            document.getElementById("info").appendChild(newP);
+            document.getElementById("info").appendChild(newImg);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 노드를 사용하는 새로운 요소 추가</title>
+    <style>
+        #container{
+          width:500px;
+          margin:10px auto;
+          padding:20px;
+        }
+        #info {
+          margin-top:20px;
+        }
+      </style>
+</head>
+<body>
+    <!-- 
+    텍스트 노드를 사용하는 새로운 요소 추가
+    1. 요소 노드 만들기 createElement() 메서드
+    document.createElement(노드명)
+    2. 텍스트 노드 만들기 createTextNode() 메서드
+    새로운 요소 노드를 만들었다면 내용을 담는 텍스트 노드를 자식 노드로 만들어 연결
+    document.createTextNode(텍스트)
+    3. 자식 노드 연결 appendChild() 메서드
+    1, 2 과정은 노드만 만든 상태이며, 부모 노드와 자식 노드로 연결되지 않음
+    appendChild() 메서드는 텍스트 노드나 속성 노드를 만든 후 요소 노드에 연결할 때 사용
+    4. 부모노드.appendChild(자식노드)
+    전체 소스 코드 완성
+    -->
+
+    <div id=""container">
+        <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더 보기</a>
+        <div id="info"></div>
+    </div>
+
+    <script>
+        function addP(){
+            var newP = document.createElement("p");
+            var textNode = document.createTextNode("DOM은 Documnet Object Model의 줄임말");
+            newP.appendChild(textNode);
+            document.getElementById("info").appendChild(newP);
+        }
+    </script>
+
+</body>
+</html>

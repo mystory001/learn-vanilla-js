@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 이름을 사용해 연결</title>
+</head>
+<body>
+    <!-- 
+    함수 이름을 사용해 연결
+    이벤트가 발생했을 때 실행할 함수를 따로 정의해 놓았다면 함수 이름을 사용해 연결할 수 있음
+    함수 이름 다음에 괄호를 추가하지 않음
+    -->
+
+    <img src="img/cup-1.png" id="cup">
+
+    <script>
+        // 이미지를 클릭하면 함수 실행
+        var cup = document.querySelector("#cup");
+        cup.onclick = changePic;
+        
+        function changePic(){
+            cup.src = "img/cup-2.png";
+        }
+    </script>
+
+</body>
+</html>

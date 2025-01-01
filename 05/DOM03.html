@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 가져오기, 수정하기</title>
+</head>
+<body>
+    <!-- 
+    속성을 가져오거나 수정하는 메서드
+    웹 요소를 문서에 삽입할 때 태그 속성을 함께 사용하려면 DOM 트리에 속성 노드가 추가되면서 속성값이 저장
+    속성에 접근하려면 getAttribute() 메서드를 사용, 접근한 속성의 값을 바꾸려면 setAttribute() 메서드를 사용
+    
+    속성 가져오기 getAttribute("속성명") 
+    
+    원하는 속성값으로 지정 setAttribute("속성명","값)
+    속성값이 이미 있다면 새로운 속성값으로 수정하고, 아직 해당 속성이 없다면 속성과 속성값을 새로 추가함
+    -->
+
+    <div id = "picDiv">
+        <img src="img/toa-heftiba-BHcB-sr_HzQ-unsplash.jpg" alt="이미지" id="pic" width="200" height="200" onclick="displaySrc()">
+    </div>
+
+    <script>
+        // 이미지 속성 가져오기
+        function displaySrc(){
+            var pic = document.querySelector("#pic");
+            alert("이미지 소스 : " + pic.getAttribute("src")); // 속성을 알림창에 표시
+        }
+    </script>
+</body>
+</html>

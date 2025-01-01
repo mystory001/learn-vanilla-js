@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener() 메서드</title>
+</head>
+<body>
+    <!-- 
+    addEventListener() 메서드
+    addEventListener() 메서드와 event 객체를 사용하면 한 요소에서 여러 이벤트 처리기를 연결해 실행할 수 있음
+    요소.addEventListener(이벤트, 함수, 캡처 여부);
+    이벤트 : 이번트 유형을 지정, on을 붙이지 않음
+    함수 : 이벤트가 발생하면 실행할 명령이나 함수를 지정. 함수를 정의할 때는 event 객체로 인수를 받음
+    캡처 여부 : 기본값은 false(버블링 : DOM의 자식 노드에서 부모 노드로 전달).
+               true(캡처링 : DOM의 부모 노드에서 자식 노드로 전달되는 것)
+    -->
+
+    <img src="img/cup-1.png" id="cover">
+
+    <script>
+        // 마우스 포인터를 올리면 이미지 바꾸기
+        var cover = document.getElementById("cover");
+        cover.addEventListener("mouseover",changeImg);
+        cover.addEventListener("mouseout",originImg);
+
+        function changeImg(){
+            cover.src = "img/cup-2.png";
+        }
+        function originImg(){
+            cover.src = "img/cup-1.png";
+        }
+    </script>
+</body>
+</html>

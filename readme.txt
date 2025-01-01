@@ -8,6 +8,9 @@
 - 정리한 사이트 : https://001cloudid.tistory.com/category/organize/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8
 
 - 학습 내용
+250101 : DOM
+
+241231 : BOM
 241230 : 내장 객체
 241229 : 함수, 이벤트
 241228 : 함수, 함수 선언 예약어
